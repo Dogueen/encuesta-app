@@ -1,0 +1,42 @@
+
+<h2>Formulario de Encuesta</h2>
+<form (ngSubmit)="onSubmit()" #encuestaForm="ngForm">
+  <div>
+    <label for="nombre">Nombre Completo:</label>
+    <input type="text" id="nombre" required [(ngModel)]="encuesta.nombre" name="nombre">
+  </div>
+  <div>
+    <label for="puesto">Puesto:</label>
+    <input type="text" id="puesto" required [(ngModel)]="encuesta.puesto" name="puesto">
+  </div>
+  <div>
+    <label for="area">Área en la que Trabaja:</label>
+    <input type="text" id="area" required [(ngModel)]="encuesta.area" name="area">
+  </div>
+  <div>
+    <label for="programa">Programa al que Pertenece:</label>
+    <input type="text" id="programa" required [(ngModel)]="encuesta.programa" name="programa">
+  </div>
+  <div>
+    <label for="telemedicina">¿Sabes qué es una cabina de telemedicina?:</label>
+    <select id="telemedicina" required [(ngModel)]="encuesta.telemedicina" name="telemedicina">
+      <option value="sí">Sí</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+  <div>
+    <label for="quedarse">¿Te gustaría que se quede?:</label>
+    <select id="quedarse" required [(ngModel)]="encuesta.quedarse" name="quedarse">
+      <option value="sí">Sí</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+  <div>
+    <label for="pagar">¿Pagarías cuatrimestralmente?:</label>
+    <select id="pagar" required [(ngModel)]="encuesta.pagar" name="pagar">
+      <option value="sí">Sí</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+  <button type="submit" [disabled]="!encuestaForm.form.valid">Enviar</button>
+</form>

@@ -1,0 +1,12 @@
+<h2>Resultados de la Encuesta</h2>
+<ul>
+  <li *ngFor="let encuesta of surveys">
+    <p><strong>Nombre Completo:</strong> {{ encuesta.nombre }}</p>
+    <p><strong>Puesto:</strong> {{ encuesta.puesto }}</p>
+    <p><strong>Área en la que Trabaja:</strong> {{ encuesta.area }}</p>
+    <p><strong>Programa al que Pertenece:</strong> {{ encuesta.programa }}</p>
+    <p><strong>¿Sabes qué es una cabina de telemedicina?:</strong> {{ encuesta.telemedicina }}</p>
+    <p><strong>¿Te gustaría que se quede?:</strong> {{ encuesta.quedarse }}</p>
+    <p><strong>¿Pagarías cuatrimestralmente?:</strong> {{ encuesta.pagar }}</p>
+  </li>
+</ul>
