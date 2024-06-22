@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Encuesta } from '../models/Encuesta/Encuesta.model';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-respuestas',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './respuestas.component.html',
   styleUrl: './respuestas.component.scss'
 })
