@@ -23,7 +23,7 @@ export class EncuestaComponent {
   constructor(private http: HttpClient) {}
 
   onSubmit() {
-    this.http.post('http://127.0.0.1:5000/add_survey', this.encuesta)
+    this.http.post('http://127.0.0.1:5000/subir_encuesta', this.encuesta)
       .subscribe(response => {
         console.log('Encuesta enviada exitosamente', response);
       }, error => {

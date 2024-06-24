@@ -17,7 +17,7 @@ export class RespuestasComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<Encuesta[]>('http://127.0.0.1:5000/surveys')
+    this.http.get<Encuesta[]>('http://127.0.0.1:5000/encuestas')
       .subscribe(data => {
         this.encuestas = data;
       }, error => {
